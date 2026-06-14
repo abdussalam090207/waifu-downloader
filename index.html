@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waifu Downloader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="kanade anime.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">WAIFU DOWNLOADER</h1>
+            <p class="subtitle">Download high-quality anime character images instantly</p>
+        </header>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Image preview container -->
+            <div class="preview-container">
+                <div class="image-wrapper">
+                    <!-- Placeholder before image loads -->
+                    <div class="placeholder" id="placeholder">
+                        <div class="placeholder-icon">⚡</div>
+                        <p>Click "Next Waifu" to load your first image</p>
+                    </div>
+
+                    <!-- Waifu image -->
+                    <img id="waifu-image" alt="Waifu Image">
+
+                    <!-- Loading overlay -->
+                    <div class="loading-overlay" id="loading-overlay">
+                        <div class="spinner"></div>
+                    </div>
+
+                    <!-- Error message -->
+                    <div class="error-message" id="error-message">
+                        <h3>Error Loading Image</h3>
+                        <p>Failed to fetch waifu image. Please try again.</p>
+                    </div>
+
+                    <!-- Image stats -->
+                    <div class="image-stats" id="image-stats">
+                        <span id="image-size">Size: --</span> | 
+                        <span id="image-dimensions">Dimensions: --</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control buttons -->
+            <div class="controls">
+                <button class="btn btn-secondary" id="next-btn">
+                    <span class="btn-icon">⟳</span>
+                    <span>Next Waifu</span>
+                </button>
+                
+                <button class="btn btn-primary" id="download-btn" disabled>
+                    <span class="btn-icon">↓</span>
+                    <span>Download Image</span>
+                </button>
+            </div>
+
+            <!-- Info panel -->
+            <div class="info-panel">
+                <h3 class="info-title">
+                    <span>⚙️</span>
+                    API Information
+                </h3>
+                <p class="info-text">
+                    This app uses the <strong>Waifu.im API</strong> to fetch random high-quality anime character images (SFW content only). 
+                    Each click on "Next Waifu" fetches a new image from the API. You can download any image you like.
+                </p>
+                
+                <div class="api-info">
+                    <span class="api-label">API Endpoint:</span>
+                    <span class="api-value">https://api.waifu.im/images</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Waifu Downloader &copy; <span id="current-year">2024</span> | Futuristic Dark Theme</p>
+            <p>All images are sourced from the Waifu.im API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>          
+</body>
+</html>
